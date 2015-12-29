@@ -1,0 +1,39 @@
+<style type="text/css">
+	#box{
+		width: 100px;
+		height: 100px;
+		background: #000;
+	}
+</style>
+<html>
+	<body>
+		<div id="box">
+			<ul class="boxul uls">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<input type="checkbox">
+	</body>
+</html>
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../index.js"></script>
+<script type="text/javascript">
+	function a(n){
+		alert('1' + n);
+	}
+	function b(){
+		alert(2);
+	}
+	function d(){
+		alert(3)
+	}
+	var c = Callbacks("returnOnfalse memory");
+	c.add(a,b);
+	c.fire("haha");
+	c.add(d);
+	c.remove(a)
+	console.log(c.has(a));
+</script>
+<script type="text/javascript">
